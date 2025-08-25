@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Calculator - Numeric Navigator</title>
+<link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+      <span class="logo">🔢</span>
+      <span class="title">Numeric Navigator</span>
+    </div>
+  <nav class="site-nav">
+    <a class="nav-link " href="./index.html">STANDARD</a>
+    <a class="nav-link" href="./scientific.html">SCIENTIFIC</a>
+    <a class="nav-link " href="./programmer.html">PROGRAMMER</a>
+    <a class="nav-link " href="converter.html">CONVERTER</a>
+    <a class="nav-link   " href="date.html" >DATE</a>
+    <a class="nav-link active  " href="finance.html" >FINANCIAL</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle">🌙</button>
+</header>
+
+<main class="app">
+    <section class="panel finance-panel">
+  <h2 class="panel-title">Financial Calculator</h2>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" data-tab="emi">Loan EMI</button>
+    <button class="tab-btn" data-tab="si">Simple Interest</button>
+    <button class="tab-btn" data-tab="ci">Compound Interest</button>
+    <button class="tab-btn" data-tab="gst">GST / Tax</button>
+  </div>
+
+  <div class="tab-content">
+    <!-- EMI Calculator -->
+    <div class="tab-pane active" id="emi">
+      <label>Loan Amount:</label>
+      <input type="number" id="emi-amount" placeholder="Enter amount">
+      <label>Interest Rate (% per year):</label>
+      <input type="number" id="emi-rate" placeholder="e.g. 7.5">
+      <label>Tenure (months):</label>
+      <input type="number" id="emi-months" placeholder="e.g. 60">
+      <button class="btn-calc" onclick="calculateEMI()">Calculate EMI</button>
+      <div class="result-box">
+        <p>Monthly EMI: <span id="emi-result">-</span></p>
+      </div>
+    </div>
+
+    <!-- Simple Interest -->
+    <div class="tab-pane" id="si">
+      <label>Principal:</label>
+      <input type="number" id="si-principal" placeholder="Enter amount">
+      <label>Rate (% per year):</label>
+      <input type="number" id="si-rate">
+      <label>Time (years):</label>
+      <input type="number" id="si-time">
+      <button class="btn-calc" onclick="calculateSI()">Calculate SI</button>
+      <div class="result-box">
+        <p>Simple Interest: <span id="si-result">-</span></p>
+      </div>
+    </div>
+
+    <!-- Compound Interest -->
+    <div class="tab-pane" id="ci">
+      <label>Principal:</label>
+      <input type="number" id="ci-principal">
+      <label>Rate (% per year):</label>
+      <input type="number" id="ci-rate">
+      <label>Time (years):</label>
+      <input type="number" id="ci-time">
+      <label>Compounded:</label>
+      <select id="ci-frequency">
+        <option value="1">Annually</option>
+        <option value="4">Quarterly</option>
+        <option value="12">Monthly</option>
+      </select>
+      <button class="btn-calc" onclick="calculateCI()">Calculate CI</button>
+      <div class="result-box">
+        <p>Compound Interest: <span id="ci-result">-</span></p>
+      </div>
+    </div>
+
+    <!-- GST / Tax -->
+    <div class="tab-pane" id="gst">
+      <label>Amount:</label>
+      <input type="number" id="gst-amount">
+      <label>GST Rate (%):</label>
+      <input type="number" id="gst-rate">
+      <button class="btn-calc" onclick="calculateGST()">Calculate GST</button>
+      <div class="result-box">
+        <p>GST Amount: <span id="gst-result">-</span></p>
+        <p>Total with GST: <span id="gst-total">-</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+
+<footer class="site-footer">
+  <p>© 2025 Numeric Navigator</p>
+</footer>
+
+<script src="js\financial.js"></script>
+<script src="js\theme.js"></script>
+</body>
+</html>

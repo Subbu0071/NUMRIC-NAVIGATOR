@@ -1,0 +1,81 @@
+/* THEME VARIABLES */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --box-bg: #fff;
+}
+
+body.dark-theme {
+  --bg-color: #1f1c2c;
+  --text-color: #fff;
+  --box-bg: rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --box-bg: #f9f9f9;
+}
+
+/* Apply theme variables */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.glass, button {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon animation */
+.theme-icon {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+.rotate {
+  transform: rotate(360deg);
+}
+
+
+
+body.light-theme {
+  background: linear-gradient(120deg, #ffffff, #f1f1f1);
+  color: #222;
+}
+
+body.light-theme .glass {
+  background: rgba(255, 255, 255, 0.8);
+  color: #222;
+}
+
+body.light-theme button {
+  background: rgba(0,0,0,0.1);
+  color: #222;
+}
+
+body.dark-theme {
+  background: linear-gradient(120deg, #1f1c2c, #928dab);
+  color: #fff;
+}
+
+body.dark-theme .glass {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+body.dark-theme button {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}

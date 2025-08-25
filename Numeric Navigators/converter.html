@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numeric Navigator — Unit Converter</title>
+  <link rel="stylesheet" href="css\styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">🔢</span>
+      <span class="title">Numeric Navigator</span>
+    </div>
+    <nav class="site-nav">
+          <a class="nav-link " href="./index.html">STANDARD</a>
+    <a class="nav-link" href="./scientific.html">SCIENTIFIC</a>
+    <a class="nav-link " href="./programmer.html">PROGRAMMER</a>
+    <a class="nav-link active" href="converter.html">CONVERTER</a>
+    <a class="nav-link  " href="date.html" >DATE</a>
+    <a class="nav-link   " href="finance.html" >FINANCIAL</a>
+
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+  </header>
+
+  <main class="app">
+    <section class="calc-shell">
+      <!-- Left: Converter IO -->
+      <aside class="panel screen-panel">
+        <h2 class="panel-title">Convert</h2>
+
+        <div class="conv-row">
+          <label class="conv-label" for="from-value">From</label>
+          <div class="conv-inline">
+            <input id="from-value" class="display input-like" type="text" placeholder="Enter value"/>
+            <select id="from-unit" class="select-like"></select>
+          </div>
+        </div>
+
+        <div class="conv-swap">
+          <button id="swap" class="btn">⇅ Swap</button>
+          <div class="conv-meta">
+            <label for="precision">Precision</label>
+            <input id="precision" type="number" min="0" max="12" value="6" class="select-like" style="width:90px"/>
+          </div>
+        </div>
+
+        <div class="conv-row">
+          <label class="conv-label" for="to-value">To</label>
+          <div class="conv-inline">
+            <input id="to-value" class="display input-like" type="text" readonly placeholder="Result"/>
+            <select id="to-unit" class="select-like"></select>
+          </div>
+        </div>
+
+        <div class="conv-actions">
+          <button id="copy-result" class="btn">Copy Result</button>
+          <button id="clear-input" class="btn btn-sec">Clear</button>
+        </div>
+
+        <div id="conv-hint" class="screen-hint">Tip: type a number and pick units. Use <kbd>Tab</kbd> to jump.</div>
+      </aside>
+
+      <!-- Right: Categories & Quick Units -->
+      <section class="panel keypad-panel">
+        <h2 class="panel-title">Category & Quick Pick</h2>
+
+        <div class="conv-controls">
+          <label for="category">Category</label>
+          <select id="category" class="select-like">
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+            <option value="speed">Speed</option>
+            <option value="area">Area</option>
+            <option value="volume">Volume</option>
+            <option value="time">Time</option>
+            <option value="energy">Energy</option>
+            <option value="digital">Digital Storage</option>
+
+          </select>
+        </div>
+
+        <div id="quick-grid" class="keypad-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <!-- Populated dynamically with common unit pairs per category -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Numeric Navigator • Built by Subbu</p>
+  </footer>
+
+  <script src="js\theme.js"></script>
+  <script src="js\converter.js"></script>
+</body>
+</html>

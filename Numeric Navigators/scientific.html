@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numeric Navigator — Scientific Calculator</title>
+  <link rel="stylesheet" href="css\styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">🔢</span>
+      <span class="title">Numeric Navigator</span>
+    </div>
+    <nav class="site-nav">
+      <a class="nav-link" href="./index.html">STANDARD</a>
+      <a class="nav-link active" href="./scientific.html">SCIENTIFIC</a>
+      <a class="nav-link" href="./programmer.html">PROGRAMMER</a>
+      <a class="nav-link " href="converter.html">CONVERTER</a>
+          <a class="nav-link  " href="date.html" >DATE</a>
+              <a class="nav-link   " href="finance.html" >FINANCIAL</a>
+
+
+
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+  </header>
+
+  <main class="app">
+    <section class="calc-shell">
+      <!-- Screen -->
+      <aside class="panel screen-panel">
+        <label for="sci-display" class="panel-title">Screen</label>
+        <input id="sci-display" class="display" type="text" readonly />
+        <div class="screen-hint">Use scientific functions below</div>
+      </aside>
+
+      <!-- Scientific Keypad -->
+      <section class="panel keypad-panel">
+        <h2 class="panel-title">Scientific Keypad</h2>
+
+        <!-- Function buttons -->
+        <div class="func-grid">
+          <button class="btn btn-func" data-func="sin">sin</button>
+          <button class="btn btn-func" data-func="cos">cos</button>
+          <button class="btn btn-func" data-func="tan">tan</button>
+          <button class="btn btn-func" data-func="log">log</button>
+          <button class="btn btn-func" data-func="ln">ln</button>
+          <button class="btn btn-func" data-func="sqrt">√</button>
+        </div>
+
+        <!-- Numeric keypad -->
+        <div class="keypad-grid">
+          <button class="btn btn-sec" data-value="C">C</button>
+          <button class="btn btn-sec" data-value="(">(</button>
+          <button class="btn btn-sec" data-value=")">)</button>
+          <button class="btn btn-op" data-value="/">÷</button>
+
+          <button class="btn" data-value="7">7</button>
+          <button class="btn" data-value="8">8</button>
+          <button class="btn" data-value="9">9</button>
+          <button class="btn btn-op" data-value="*">×</button>
+
+          <button class="btn" data-value="4">4</button>
+          <button class="btn" data-value="5">5</button>
+          <button class="btn" data-value="6">6</button>
+          <button class="btn btn-op" data-value="-">−</button>
+
+          <button class="btn" data-value="1">1</button>
+          <button class="btn" data-value="2">2</button>
+          <button class="btn" data-value="3">3</button>
+          <button class="btn btn-op" data-value="+">+</button>
+
+          <button class="btn" data-value="0">0</button>
+          <button class="btn" data-value=".">.</button>
+          <button class="btn btn-sec" data-value="back">⌫</button>
+          <button class="btn btn-eq" data-value="=">=</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Numeric Navigator • Built by Subbu</p>
+  </footer>
+
+  <script src="js\theme.js"></script>
+  <script src="js\scientific.js"></script>
+</body>
+</html>

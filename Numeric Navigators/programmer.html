@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numeric Navigator — Programmer Mode</title>
+  <link rel="stylesheet" href="css\styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">🔢</span>
+      <span class="title">Numeric Navigator</span>
+    </div>
+    <nav class="site-nav">
+      <a class="nav-link" href="./index.html">STANDARD</a>
+      <a class="nav-link" href="./scientific.html">SCIENTIFIC</a>
+      <a class="nav-link active" href="./programmer.html">PROGRAMMER</a>
+      <a class="nav-link " href="converter.html">CONVERTER</a>
+          <a class="nav-link  " href="date.html" >DATE</a>
+              <a class="nav-link   " href="finance.html" >FINANCIAL</a>
+
+
+
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+  </header>
+
+  <main class="app">
+    <section class="calc-shell">
+      <!-- Left Panel: Conversion Fields -->
+      <aside class="panel">
+        <h2 class="panel-title">Conversions</h2>
+        <div class="conversion-fields">
+          <label>Decimal</label>
+          <input id="dec" type="text" placeholder="Enter decimal" />
+
+          <label>Binary</label>
+          <input id="bin" type="text" placeholder="Enter binary" />
+
+          <label>Octal</label>
+          <input id="oct" type="text" placeholder="Enter octal" />
+
+          <label>Hexadecimal</label>
+          <input id="hex" type="text" placeholder="Enter hex" />
+        </div>
+      </aside>
+
+      <!-- Right Panel: Bitwise Operations -->
+      <section class="panel">
+        <h2 class="panel-title">Bitwise Operations</h2>
+        <div class="bitwise-grid">
+          <input id="bit-input1" type="text" placeholder="First number" />
+          <input id="bit-input2" type="text" placeholder="Second number" />
+
+          <button class="btn" data-op="AND">AND</button>
+          <button class="btn" data-op="OR">OR</button>
+          <button class="btn" data-op="XOR">XOR</button>
+          <button class="btn" data-op="NOT">NOT (1st)</button>
+          <button class="btn" data-op="LSHIFT"><<</button>
+          <button class="btn" data-op="RSHIFT">>></button>
+        </div>
+        <div class="bitwise-result">
+          <strong>Result:</strong> <span id="bit-result">-</span>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Numeric Navigator • Built by Subbu</p>
+  </footer>
+
+  <script src="js\theme.js"></script>
+  <script src="js\programmer.js"></script>
+</body>
+</html>

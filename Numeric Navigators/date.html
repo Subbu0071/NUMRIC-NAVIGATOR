@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Calculator - Numeric Navigator</title>
+<link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+      <span class="logo">🔢</span>
+      <span class="title">Numeric Navigator</span>
+    </div>
+  <nav class="site-nav">
+    <a class="nav-link " href="./index.html">STANDARD</a>
+    <a class="nav-link" href="./scientific.html">SCIENTIFIC</a>
+    <a class="nav-link " href="./programmer.html">PROGRAMMER</a>
+    <a class="nav-link " href="converter.html">CONVERTER</a>
+    <a class="nav-link active  " href="date.html" >DATE</a>
+        <a class="nav-link   " href="finance.html" >FINANCIAL</a>
+
+  </nav>
+  <button class="theme-toggle" id="theme-toggle">🌙</button>
+</header>
+
+<main class="app">
+  <div class="calc-shell">
+    <!-- Left: Display -->
+    <div class="panel screen-panel">
+      <h2 class="panel-title">Result</h2>
+      <textarea id="date-result" class="display" readonly placeholder="Result will appear here..."></textarea>
+      <div class="screen-hint">Select mode and enter dates</div>
+    </div>
+
+    <!-- Right: Controls -->
+    <div class="panel keypad-panel">
+      <h2 class="panel-title">Controls</h2>
+
+      <label for="mode">Mode:</label>
+      <select id="mode" class="mode-select">
+        <option value="diff">Date Difference</option>
+        <option value="add">Add Days</option>
+        <option value="sub">Subtract Days</option>
+      </select>
+
+      <div id="date-inputs">
+        <div class="input-group" id="group-start">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date">
+        </div>
+        <div class="input-group" id="group-end">
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date">
+        </div>
+        <div class="input-group hidden" id="group-days">
+          <label for="days">Days:</label>
+          <input type="number" id="days" placeholder="Enter number of days">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn" id="btn-today">Today</button>
+        <button class="btn" id="btn-clear">Clear</button>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-eq" id="btn-calc">Calculate</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Numeric Navigator</p>
+</footer>
+
+<script src="js\date-time.js"></script>
+<script src="js\theme.js"></script>
+</body>
+</html>
